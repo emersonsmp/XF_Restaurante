@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "CEA2pCOE6BnboO1dR5FVAumeuwQrZPYqNoJoBoK5ikYSPQqV31N93uGhuj8MxOf/uR0vGKrUSOPlOlV7R8JRMw==",
+  "success": true,
+  "projectFilePath": "C:\\Desafio\\XF_Restaurante\\Restaurante\\Restaurante.iOS\\Restaurante.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Emerson Sampaio\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Emerson Sampaio\\.nuget\\packages\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.5.0.495\\xamarin.forms.4.5.0.495.nupkg.sha512"
+  ],
+  "logs": []
+}
