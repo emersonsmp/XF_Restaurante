@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Restaurante.View.PaginaDeProdutosView" Title="Produtos">
+
+
+    <Grid Margin="10,0,10,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="80*"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0" VerticalOptions="CenterAndExpand" Padding="0,0,0,0">
+            <Button Text="ADD PRODUTO" Command="{Binding AdicionarNovaProdutoCommand}" Style="{StaticResource StyleButtonRed}"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="1">
+            <Label Text="Você ainda não adicionou nenhum Produto" IsVisible="{Binding isVisibleAviso}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+
+            <ListView x:Name="ProdutosAtivosDoMercado" ItemsSource="{Binding ProdutosAtivosDoMercado}" IsVisible="{Binding isVisibleListaDeProdutos}" RowHeight="80">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Padding="5" Margin="2,5,2,5" BackgroundColor="White">
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer 
+                                                    Command="{Binding Path=BindingContext.EditarProdutoCommand, Source={x:Reference ProdutosAtivosDoMercado}}" 
+                                                    CommandParameter="{Binding .}"/>
+                                </Frame.GestureRecognizers>
+
+                                <!--<Label Text="{Binding Nome}"/> -->
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="4*"/>
+                                        <ColumnDefinition Width="5*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image Grid.Column="0" Source="{Binding Imagem}"/>
+                                    <StackLayout Grid.Column="1">
+                                        <Label Text="{Binding Nome}" FontSize="20"/>
+                                        <Label Text="{Binding Descricao}" FontSize="12" VerticalOptions="CenterAndExpand"/>
+                                    </StackLayout>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </Grid>
+</ContentPage>

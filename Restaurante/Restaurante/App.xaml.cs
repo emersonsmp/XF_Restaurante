@@ -1,6 +1,8 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Restaurante.View;
+using Restaurante.Model;
 
 namespace Restaurante
 {
@@ -9,8 +11,16 @@ namespace Restaurante
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            //bool isLoggedIn = Convert.ToBoolean(Current.Properties.ContainsKey("IsLoggedIn").ToString());
+            if (Setting.UserName != string.Empty && Setting.UserPassword != string.Empty)
+            {
+               // MainPage = new PerfilView();
+                App.Current.MainPage = new NavigationPage(new PerfilView());
+            }
+            else
+            {
+                MainPage = new HomeView();
+            }  
         }
 
         protected override void OnStart()

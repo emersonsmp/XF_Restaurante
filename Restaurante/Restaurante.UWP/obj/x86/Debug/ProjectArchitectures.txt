@@ -1,0 +1,1 @@
+C:\Desafio\XF_Restaurante\Restaurante\Restaurante.UWP\Restaurante.UWP.csproj;x86

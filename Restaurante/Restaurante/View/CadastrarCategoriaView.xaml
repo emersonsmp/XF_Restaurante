@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Restaurante.View.CadastrarCategoriaView">
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80*"/>
+                <RowDefinition Height="20*"/>
+            </Grid.RowDefinitions>
+
+            <ScrollView Grid.Row="0">
+                <ListView RowHeight="100" ItemsSource="{Binding OpcoesDeCategorias}" x:Name="ListaDeCategorias" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Frame Padding="5" Margin="10,5,10,5" BackgroundColor="White">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer 
+                                                    Command="{Binding Path=BindingContext.AdicionarCategoriaCommand, Source={x:Reference ListaDeCategorias}}" 
+                                                    CommandParameter="{Binding .}"/>
+                                    </Frame.GestureRecognizers>
+                                    <StackLayout>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <Image Grid.Column="0" Source="{Binding Imagem}" />
+                                            <StackLayout Grid.Column="1">
+                                                <Label Grid.Column="1" Text="{Binding Titulo}" TextColor="Black" FontSize="15"/>
+                                                <Label Grid.Column="1" Text="{Binding Descricao}" TextColor="Black" FontSize="12"/>
+                                            </StackLayout>
+                                        </Grid>
+                                    </StackLayout>
+                                    
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

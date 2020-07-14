@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:Restaurante.Renderers"
+             mc:Ignorable="d"
+             x:Class="Restaurante.View.EditarProdutoView">
+    <ContentPage.Content>
+        <StackLayout Margin="20,5,20,5">
+            <Image Source="{Binding Produto.Imagem}" HeightRequest="200"/>
+            <local:CustonEntry Text="{Binding Produto.Nome}" Placeholder="Nome" IsEnabled="False"/>
+            <local:CustonEntry Text="{Binding Produto.Descricao}" Placeholder="Descricao" IsEnabled="False"/>
+
+            <Label Text="Categoria:"/>
+            <Picker SelectedIndex="{Binding Categoria}"
+                    Title="Escolha a categoria:"
+                    TitleColor="Red">
+
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Bebidas</x:String>
+                        <x:String>Pratos</x:String>
+                        <x:String>Fast Food</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Button Text="Atulizar" Command="{Binding AdicionarProdutoCommand}" Style="{StaticResource StyleButtonRed}"/>
+            <Button Text="Remover" Command="{Binding RemoverProdutoCommand}" Style="{StaticResource StyleButtonRed}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:Renderers="clr-namespace:Restaurante.Renderers"
+             mc:Ignorable="d"
+             x:Class="Restaurante.View.PaginadeLoginView">
+    <Grid RowSpacing="10">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
+
+        <Image Source="Header.png" Grid.Row="0" HorizontalOptions="Start" VerticalOptions="Start"/>
+        <Label Text="LOGIN" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" Style="{d:StaticResource TitleStyle}"/>
+
+        <StackLayout Grid.Row="1" Margin="20,0,20,0" Spacing="10">
+            <Renderers:CustonEntry Text="{Binding EntryEmail}" Placeholder="Email" BackgroundColor="LightGray"/>
+            <Renderers:CustonEntry Text="{Binding EntryPassWord}" Placeholder="Senha" IsPassword="True" BackgroundColor="LightGray"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="2" VerticalOptions="CenterAndExpand" Padding="20,0,20,0" Spacing="10">
+            <Button Text="Login" Style="{d:StaticResource StyleButtonRed}" Command="{Binding ChamaMetodoFazerLogin}"/>
+            <Label Text="Esqueci Minha senha" Style="{d:StaticResource SubTitleStyle}" HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <Image Source="rodape.png" Grid.Row="3"  VerticalOptions="End" Aspect="Fill"/>
+    </Grid>
+    
+</ContentPage>
