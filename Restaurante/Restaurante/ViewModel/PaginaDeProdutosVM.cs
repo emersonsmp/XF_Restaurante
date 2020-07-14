@@ -61,7 +61,7 @@ namespace Restaurante.ViewModel
             List<ProdutoModel> _produtos = conexao.ObterProdutos(_categoria);
             ProdutosAtivosDoMercado = new ObservableCollection<ProdutoModel>(_produtos);
 
-            if (ProdutosAtivosDoMercado != null)
+            if (ProdutosAtivosDoMercado.count > 0)
             {
                 isVisibleListaDeProdutos = true;
             }
@@ -96,6 +96,16 @@ namespace Restaurante.ViewModel
         {
             List<ProdutoModel> _produtos = conexao.ObterProdutos(_categoria);
             ProdutosAtivosDoMercado = new ObservableCollection<ProdutoModel>(_produtos);
+            
+            if (ProdutosAtivosDoMercado.Count > 0)
+            {
+                isVisibleListaDeProdutos = true;
+                isVisibleAviso = false;
+            }else
+            {
+                isVisibleListaDeProdutos = false;
+                isVisibleAviso = true;
+            }
         }
 
     }
