@@ -77,7 +77,7 @@ namespace Restaurante.ViewModel
             List<CategoriaModel> _categorias = conexao.ObterCategorias();
             CategoriasAtivasDoMercado = new ObservableCollection<CategoriaModel>(_categorias);
 
-            if (CategoriasAtivasDoMercado.Count >= 1)
+            if (CategoriasAtivasDoMercado.Count > 0)
             {
                 isVisibleListaDeCategorias = true;
             }
@@ -118,6 +118,12 @@ namespace Restaurante.ViewModel
         {
             List<CategoriaModel> _categoriass = conexao.ObterCategorias();
             CategoriasAtivasDoMercado = new ObservableCollection<CategoriaModel>(_categoriass);
+            
+            if (CategoriasAtivasDoMercado.Count > 0)
+            {
+                isVisibleListaDeCategorias = true;
+                isVisibleAviso = false;
+            }
         }
     }
 }
