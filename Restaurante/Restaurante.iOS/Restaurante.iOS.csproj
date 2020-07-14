@@ -166,4 +166,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\Header.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="exit.png" />
+  </ItemGroup>
 </Project>

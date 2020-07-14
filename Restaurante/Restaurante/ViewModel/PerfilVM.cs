@@ -28,6 +28,7 @@ namespace Restaurante.ViewModel
 
         public Command AdicionarNovaCategoria { get; set; }
         public Command GoCategoriaCommand { get; set; }
+        public Command FazerLogoutCommand { get; set; }
 
         public bool _isVisibleListaDeCategorias { get; set; }
         public bool isVisibleListaDeCategorias
@@ -67,6 +68,7 @@ namespace Restaurante.ViewModel
             PovoarListaDeCategorias();
             AdicionarNovaCategoria = new Command(NovaCategoria);
             GoCategoriaCommand = new Command<object>(VerPaginaDeCategoria);
+            FazerLogoutCommand = new Command(FazerLogout);
         }
 
         public void PovoarListaDeCategorias()
@@ -83,6 +85,13 @@ namespace Restaurante.ViewModel
             {
                 isVisibleAviso = true;
             }
+        }
+
+        public void FazerLogout()
+        {
+            Setting.UserName = "";
+            Setting.UserPassword = "";
+            App.Current.MainPage = new HomeView();
         }
 
         private void NovaCategoria()

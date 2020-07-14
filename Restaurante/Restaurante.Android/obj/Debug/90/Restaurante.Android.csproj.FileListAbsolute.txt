@@ -49,10 +49,6 @@ C:\Desafio\XF_Restaurante\Restaurante\Restaurante.Android\obj\Debug\90\res\mipma
 C:\Desafio\XF_Restaurante\Restaurante\Restaurante.Android\obj\Debug\90\res\mipmap-xxhdpi\launcher_foreground.png
 C:\Desafio\XF_Restaurante\Restaurante\Restaurante.Android\obj\Debug\90\res\mipmap-xxxhdpi\icon.png
 C:\Desafio\XF_Restaurante\Restaurante\Restaurante.Android\obj\Debug\90\res\mipmap-xxxhdpi\launcher_foreground.png
-C:\Desafio\XF_Restaurante\Restaurante\Restaurante.Android\obj\Debug\90\res\drawable\homefinal2.jpg
-C:\Desafio\XF_Restaurante\Restaurante\Restaurante.Android\obj\Debug\90\res\drawable\homefinal1.jpg
-C:\Desafio\XF_Restaurante\Restaurante\Restaurante.Android\obj\Debug\90\res\drawable\homefinal3.jpg
-C:\Desafio\XF_Restaurante\Restaurante\Restaurante.Android\obj\Debug\90\res\drawable\homefinal.jpg
 C:\Desafio\XF_Restaurante\Restaurante\Restaurante.Android\obj\Debug\90\res\drawable\rodape.png
 C:\Desafio\XF_Restaurante\Restaurante\Restaurante.Android\obj\Debug\90\res\drawable\header.png
 C:\Desafio\XF_Restaurante\Restaurante\Restaurante.Android\obj\Debug\90\res\drawable\pratos.png
@@ -521,3 +517,4 @@ C:\Desafio\XF_Restaurante\Restaurante\Restaurante.Android\obj\Debug\90\android\a
 C:\Desafio\XF_Restaurante\Restaurante\Restaurante.Android\obj\Debug\90\android\assets\Plugin.Settings.Abstractions.dll.mdb
 C:\Desafio\XF_Restaurante\Restaurante\Restaurante.Android\obj\Debug\90\android\assets\Plugin.Settings.dll
 C:\Desafio\XF_Restaurante\Restaurante\Restaurante.Android\obj\Debug\90\android\assets\Plugin.Settings.dll.mdb
+C:\Desafio\XF_Restaurante\Restaurante\Restaurante.Android\obj\Debug\90\res\drawable\exit.png

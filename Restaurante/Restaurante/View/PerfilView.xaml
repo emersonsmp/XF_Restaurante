@@ -5,6 +5,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Restaurante.View.PerfilView" Title="Bem Vindo">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="exit.png" Command="{Binding FazerLogoutCommand}"/>
+    </ContentPage.ToolbarItems>
+    
     <Grid Margin="10,0,10,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="10*"/>
